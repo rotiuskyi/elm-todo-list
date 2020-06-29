@@ -1,8 +1,8 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, div, form, h3, input, li, node, text, ul)
-import Html.Attributes exposing (href, rel, style, value)
+import Html exposing (Html, div, form, h3, input, li, text, ul)
+import Html.Attributes exposing (style, value)
 import Html.Events exposing (onClick, onInput, onSubmit)
 import SemanticUI.Elements.Button as Button
 import SemanticUI.Elements.Icon as Icon
@@ -68,8 +68,8 @@ view model =
         [ style "margin" "0 auto"
         , style "max-width" "768px"
         ]
-        [ node "link" [ rel "stylesheet", href "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" ] []
-        , h3 [] [ text "Task List" ]
+        [ -- node "link" [ rel "stylesheet", href "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" ] [],
+          h3 [] [ text "Task List" ]
         , Html.form [ onSubmit CreateTask ]
             [ Input.input
                 (let
